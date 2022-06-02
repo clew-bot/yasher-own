@@ -67,6 +67,6 @@ export default {
     z-index: 2;
     background-image: url(./assets/background.png);
     background-size: 100% 100%;
-    opacity: 1;
+    opacity: 0.4;
   }
 </style>
