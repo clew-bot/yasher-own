@@ -75,6 +75,7 @@ export default {
 
 <style scoped>
 
+
 .outer-container {
     position: absolute;
     top: 0; 
