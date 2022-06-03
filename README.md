@@ -5,4 +5,6 @@
 
 ### This is a WIP
 
+![Demo](./assets/demo.png)
+
 
