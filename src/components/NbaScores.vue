@@ -1,7 +1,7 @@
 <template>
-  <button @click="getSports" style="position: absolute; z-index: 9; top: 300px" >
+  <!-- <button @click="getSports" style="position: absolute; z-index: 9; top: 300px" >
     Click for tes
-  </button>
+  </button> -->
 <div id="outer-container" :class="{ showing: !loading, noShow: loading }">
   <div  id="scorebox" v-for="game in nbaGames" :key="game">
 

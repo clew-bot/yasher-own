@@ -1,24 +1,8 @@
-# yasher-own
+# Yasher Custom Dashboard
 
-## Project setup
-```
-npm install
-```
+## Description
+<p>Yasher is a customized dashboard I wrote in Vue. Has basic weather, NBA games, and inspirational quotes. Influenced by Momentum. </p>
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### This is a WIP
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
