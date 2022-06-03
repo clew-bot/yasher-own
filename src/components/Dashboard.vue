@@ -1,4 +1,5 @@
 <template>
+<NbaScores/>
   <img v-if="!weather"
     @click="getWeather"
     id="weatherIcon"
@@ -9,7 +10,9 @@
   <p id="weather">{{weather}}°</p>
   <p id="weatherName">{{weatherName}}</p>
   </div>
+  <transition>
   <h1 v-if="!loading" id="theTime">{{ getDate }}</h1>
+  </transition>
   <h3 id="welcomeMessage" @click="consoleme">Good Evening Chad</h3>
   <h3 id="quoteMessage" @click="consoleme">{{ quotes }}</h3>
 </template>
@@ -17,8 +20,12 @@
 <script>
 import moment from "moment";
 import quotesJson from "../assets/quotes/quotes.json";
+import NbaScores from "@/components/NbaScores.vue";
 export default {
   name: "Dashboard",
+  components: {
+    NbaScores
+  },
   data() {
     return {
       time: null,
@@ -34,7 +41,7 @@ export default {
   },
   methods: {
     consoleme() {
-      console.log(this.lat, this.lon);
+      
     },
     async getWeather() {
       if (!this.lat || !this.lon) {
@@ -107,6 +114,8 @@ export default {
 
 <style scoped>
 
+
+
 #weather {
   z-index: 2;
   position: absolute;
@@ -143,6 +152,7 @@ export default {
   transform: translate(50%, -100%);
   font-size: 10.5rem;
   z-index: 2;
+  pointer-events: none;
 }
 
 #quoteMessage {
@@ -188,5 +198,18 @@ export default {
   to {
     opacity: 1;
   }
+}
+
+.v-enter-active {
+  transition: opacity .2s;
+}
+.v-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+
 }
 </style>
