@@ -5,6 +5,6 @@
 
 ### This is a WIP
 
-![Demo](./assets/demo.png)
+![Demo](./src/assets/demo.png)
 
 
